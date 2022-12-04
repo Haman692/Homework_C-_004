@@ -25,4 +25,4 @@ if(num > 0)
     int sum = Decay(num);
     Console.WriteLine(sum);
 }
-else (Console.WriteLine("Введено неверно число"));
+else Console.WriteLine("Введено неверно число");
