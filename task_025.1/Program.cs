@@ -10,10 +10,23 @@ int DataNumber(string meseg)
 
 int numberA = DataNumber("Введите число А ");
 int numberB = DataNumber("Введите число В ");
-
 double exp = numberA;
-for (int i = 1; i < numberB; i++)
+if(numberB > 0)
 {
-    exp = exp*numberA;
+    for (int i = 1; i < numberB; i++)
+    {
+     exp = exp*numberA;
+    }
+    Console.WriteLine($"Степень числа {numberA} в {numberB} = {Math.Round(exp, 2)}");
 }
-Console.WriteLine($"Степень числа {numberA} в {numberB} = {exp}");
+else if(numberB == 0) exp = 1;
+else
+{
+    numberB = -numberB;
+    for (int i = 1; i < numberB; i++)
+    {
+    exp = exp*numberA;
+    }
+    exp = 1/exp;
+    Console.WriteLine($"Степень числа {numberA} в -{numberB} = {Math.Round(exp, 2)}");
+}

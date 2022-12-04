@@ -12,4 +12,4 @@ int numberA = DataNumber("Введите число А ");
 int numberB = DataNumber("Введите число В ");
 
 double exp = Math.Pow(numberA, numberB);
-Console.WriteLine($"Степень числа {numberA} в {numberB} = {exp}");
+Console.WriteLine($"Степень числа {numberA} в {numberB} = {Math.Round(exp, 2)}");

@@ -20,5 +20,9 @@ int Decay(int number)
 }
 
 int num = DataNumber("Введите число ");
-int sum = Decay(num);
-Console.WriteLine(sum);
+if(num > 0)
+{
+    int sum = Decay(num);
+    Console.WriteLine(sum);
+}
+else (Console.WriteLine("Введено неверно число"));
